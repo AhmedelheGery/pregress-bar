@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-width:950px;
+
+}
+.container {
+  height: 100vh;
+  padding: 0 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafafa;
+}
+
+.container .progress-bars-warpper{
+    width: 100%;
+}
+
+.container .progress-bars-warpper .my-progress {
+  width: 100%;
+  background-color: #EBEBEB;
+  border-radius: 20px;
+  margin-bottom:  30px;
+}
+
+.container .progress-bars-warpper .my-bar {
+  width: 50%;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #797979;
+  padding-right: 3%;
+}
+.my-bar-1{
+    background-color: #A7DA61;
+}
+.my-bar-2{
+    background-color: #FF8A78;
+}
+.my-bar-3{
+    background-color: #ffffff;
+}
+.my-bar-4{
+    background-color: #9BD2F3;
+}
+.my-bar-5{
+    background-color: #FFD269;
+}
+
+.btn-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px ;
+}
+.btn-wrapper .submit-btn{
+    background-color: rgb(128, 128, 231) ;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    border-radius: 20px;
+    width: 20%;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px 0;
+}
+

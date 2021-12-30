@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Progres bar</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="progress-bars-warpper">
+        <div class="my-progress">
+          <div id="myBar1" class="my-bar my-bar-1">50%</div>
+        </div>
+        <div class="my-progress">
+          <div id="myBar" class="my-bar my-bar-2">50%</div>
+        </div>
+        <div class="my-progress">
+          <div id="myBar" class="my-bar my-bar-3">50%</div>
+        </div>
+        <div class="my-progress">
+          <div id="myBar" class="my-bar my-bar-4">50%</div>
+        </div>
+        <div class="my-progress">
+          <div id="myBar" class="my-bar my-bar-5">50%</div>
+        </div>
+        <div class="btn-wrapper">
+          <button class="submit-btn" onclick="move()">Finish</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      var i = 0;
+      function move() {
+        if (i == 0) {
+          i = 1;
+          var elem = document.getElementById("myBar1");
+          let elements = document.querySelectorAll(".my-bar");
+          elements.forEach(function (elem) {
+            var width = 10;
+            var id = setInterval(frame, 10);
+            function frame() {
+              if (width >= 100) {
+                clearInterval(id);
+                i = 0;
+              } else {
+                width++;
+                elem.style.width = width + "%";
+                elem.innerHTML = width + "%";
+              }
+            }
+          });
+        }
+      }
+    </script>
+  </body>
+</html>
